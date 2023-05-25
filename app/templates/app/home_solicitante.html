@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+  <title>Painel de funções</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'app/css/home_nav.css' %}?v={{ VERSION }}">
+</head>
+<body>
+    <header class="header" id="header">
+      <nav class="nav-bar">
+        <div>
+            <button class="menu-button" onclick="toggleNavbar()">Menu</button>
+        </div>
+        <div class="nav-list">
+          <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="/solicitado_solicitante_list/?unid={{ unid }}" class="nav-link">Acompanhamento de cadastro</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Mapa de Leitos</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Sair</a></li>
+          </ul>
+        </div>
+        <div>
+          <button class="mobile-menu-button" onclick="toggleNavbar()">Menu</button>
+      </div>        
+      </nav>
+
+    </header>  
+
+  <script src="{% static 'app/js/script_nav.js' %}?v={{ VERSION }}"></script>
+</body>
+</html>

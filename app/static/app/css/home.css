@@ -1,0 +1,77 @@
+/* Estilos CSS */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.block {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  background-size: cover;
+  background-position: center;
+  background-color: #0455fb;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: lightgray;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.block:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo personalizado para a barra azul fixa */
+.fixed-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.home-title-bottom {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 100px;
+  padding: 2%;
+  display: block;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  border: 1px solid #0455fb;
+  background-color: #0455fb;
+  color: white;
+}
+
+@font-face {
+font-family: 'Montserrat';
+src: url('/static/app/fonts/Montserrat-Bold.ttf') format('truetype');
+/* Adicione estilos adicionais, como font-weight e font-style, se necessário */
+}
+
+/* Estilo personalizado para a barra azul fixa */
+.fixed-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

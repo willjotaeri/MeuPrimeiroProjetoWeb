@@ -1,0 +1,93 @@
+<!-- solicitado_solicitante_list.html -->
+{% if request.user.username %}
+
+{% else %}
+    {% redirect 'login' %}
+{% endif %}
+<table>
+  <thead>
+    <tr>
+      <th>ID REGISTRO</th>
+      <th>ID PDF</th>
+      <th>MUNICIPIO</th>
+      <th>REGIÃO</th>
+      <th>UNIDADE SOLICITANTE</th>
+      <th>UNIDADE REQUERENTE</th>
+      <th>TELEFONE</th>
+      <th>MÉDICO SOLICITANTE</th>
+      <th>CNS</th>
+      <th>NOME</th>
+      <th>DATA DE NASCIMENTO</th>
+      <th>IDADE</th>
+      <th>SEXO</th>
+      <th>NOME DA MÃE</th>
+      <th>NOME DO ACOMPANHANTE</th>
+      <th>TELEFONE  DO ACOMPANHANTE</th>
+      <th>ENDEREÇO</th>
+      <th>MUNICÍPIO DE PROCEDÊNCIA</th>
+      <th>DATA DE ADMISSÃO NA UNIDADE SOLICITANTE</th>
+      <th>HORA DE ADMISSÃO NA UNIDADE SOLICITANTE</th>
+      <th>PRESSÃO ARTERIAL</th>
+      <th>FREQUÊNCIA CARDÍACA</th>
+      <th>FREQUÊNCIA RESPIRATÓRIA</th>
+      <th>GLICEMIA</th>
+      <th>TEMPERATURA</th>
+      <th>ESCALA DE GLASGOW</th>
+      <th>SATURAÇÃO</th>
+      <th>OXIGENOTERAPIA</th>
+      <th>FLUXO DE O2 / PARÂMETROS VENTILATÓRIOS</th>
+      <th>COMORBIDADES</th>
+      <th>HD / DIAGNÓSTICO</th>
+      <th>HISTÓRICO CLÍNICO</th>
+      <th>EXAME FÍSICO</th>
+      <th>MEDICAÇÕES</th>
+      <th>DROGAS VASOATIVAS - DVAs</th>
+      <th>EXAMES COMPLEMENTARES</th>
+      <th>OBSERVAÇÕES</th>
+      <th>ECG</th>
+      <th>EXAME DE IMAGEM</th>
+      <th>ARQUIVO DE EXAMES</th>
+      <th>TIPO DE LEITO SOLICITADO</th>
+      <th>ESPECIALIDADE</th>
+      <th>SITUAÇÃO</th>
+      <th>MOTIVO DE DESISTÊNCIA</th>
+      <th>ACEITA SERVIDOR</th>
+      <th>ACEITA MEDICO REGULADOR</th>
+      <th>CARIMBO ACEITA MEDICO</th>
+      <th>MÉDICO REGULADOR</th>
+      <th>REGISTRO DO MÉDICO REGULADOR</th>
+      <th>DESTINO DA REGULAÇÃO</th>
+      <th>SETOR</th>
+      <th>TIPO DE LEITO</th>
+      <th>LEITO</th>
+      <th>MOTIVO PARA FILA DE ESPERA</th>
+      <th>UNIDADE EXECUTANTE</th>
+      <th>MÉDICO RESPONSÁVEL</th>
+      <th>CRM</th>
+      <th>CONTATO EXECUTANTE</th>
+      <th>REGISTRO DA EXECUTANTE</th>
+      <th>MOTIVO DE NEGAÇÃO DA EXECUTANTE</th>
+      <th>CÓDIGO-REGULAÇÃO</th>
+      <th>AIH</th>
+      <th>MOTIVO DA FINALIZAÇÃO</th>
+      <th>CARIMBO</th>
+      <th>CARIMBO UNIDADE</th>
+      <th>CARIMBO MEDICO</th>
+      <th>CARIMBO EXECUTANTE</th>
+      <th>CARIMBO DE PERMANENCIA</th>
+      <th>PDF</th>
+      <th>XLSX</th>
+      <!-- Adicione mais colunas conforme necessário -->
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in registros_solicitante %}
+    <tr>
+      <td>{{ item.id_registro }}</td>
+      <td>{{ item.id_pdf }}</td>
+      <td>{{ item.unidade_solicitante }}</td>
+      <!-- Adicione mais colunas conforme necessário -->
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
